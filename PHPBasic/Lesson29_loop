@@ -1,0 +1,17 @@
+<?php
+
+
+function joinNumbersFromRange($start,$end)
+{
+
+    $str = (string)$start;
+
+    while($end > $start)
+    {
+        $start = $start + 1;
+        $str = $str . (string)$start;
+    }
+
+    return $str;
+}
+
