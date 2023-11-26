@@ -1,0 +1,15 @@
+<?php
+
+function sumOfSeries($from,$to)
+{
+    $sum = 0;
+
+    for($i = $from; $i <= $to; $i++)
+        $sum += $i;
+
+    return $sum;
+}
+
+echo sumOfSeries(1,1) . "\n";
+echo sumOfSeries(1,3) . "\n";
+echo sumOfSeries(4,7) . "\n";

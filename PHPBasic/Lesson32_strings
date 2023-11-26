@@ -1,0 +1,29 @@
+<?php
+
+function invertCase($text)
+{
+    $result = '';
+
+    for($i = 0; $i < strlen($text);$i++)
+    {
+        if(ctype_alpha($text[$i]))
+        {
+            if(ctype_upper($text[$i]))
+                $result .=mb_strtolower($text[$i]);
+            else
+                $result .=mb_strtoupper($text[$i]);
+        }
+        else
+            $result .=$text[$i];
+    }
+
+    return $result;
+}
+
+echo invertCase('ПрИвЕт!');
+
+/*
+IntlChar::isalpha()//is digit
+ctype_upper()
+ctype_lower()
+lcfirst();*/
