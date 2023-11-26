@@ -1,29 +1,23 @@
 <?php
 
 function invertCase($text)
-{
+{ 
     $result = '';
 
-    for($i = 0; $i < strlen($text);$i++)
+    for($i = 0; $i < mb_strlen($text);$i++)
     {
-        if(ctype_alpha($text[$i]))
-        {
-            if(ctype_upper($text[$i]))
-                $result .=mb_strtolower($text[$i]);
-            else
-                $result .=mb_strtoupper($text[$i]);
-        }
+        $let = mb_substr($text,$i,1);
+
+        if($let === mb_strtoupper($let))
+            $result .=mb_strtolower($let);
         else
-            $result .=$text[$i];
+            $result .=mb_strtoupper($let);
+
     }
 
     return $result;
 }
 
-echo invertCase('ПрИвЕт!');
+echo invertCase('Jov!');
 
-/*
-IntlChar::isalpha()//is digit
-ctype_upper()
-ctype_lower()
-lcfirst();*/
+ 
