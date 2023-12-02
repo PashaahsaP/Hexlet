@@ -1,0 +1,10 @@
+{
+    "name": "pashaahsap/learn",
+    "description": "test composer",
+    "authors": [
+        {
+            "name": "Pavel Semenov"
+        }
+    ],
+    "require": {}
+}
